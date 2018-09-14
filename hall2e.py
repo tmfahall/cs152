@@ -1,3 +1,9 @@
+# Author: Andrew Hall
+# Date: 9/14/18
+# Class: CSIS 152
+# Instructor: Dr. Brekke
+# Assignment: Program 2
+
 ##inputs
 #seconds (float)
 
@@ -26,7 +32,7 @@ def secondsToDHMS(seconds):
         hours = seconds//3600
         seconds = seconds - (hours * 3600)
         hoursString = str(hours) + " hours"
- 
+
     if seconds > 60:
         minutes = seconds//60
         seconds = seconds - (minutes * 60)
@@ -36,21 +42,30 @@ def secondsToDHMS(seconds):
         seconds = int(seconds)
         secondsString = str(seconds) + " seconds"
 
-    return str(startingSeconds) + " seconds is " + daysString + ", " + hoursString + ", " + minutesString + ", " + secondsString
+    timeTuple = (daysString, hoursString, minutesString, secondsString, startingSeconds)
 
-seconds = input("Enter time in seconds: ")
+    return timeTuple
 
-def isNumber(toTest):
-    try:
-        float(toTest)
-        return True
-    except ValueError:
-        pass
-    
-    return False
 
-if isNumber(seconds) == True:
-    print(secondsToDHMS(seconds))
+def getInput(text):
+    while True:
+        try:
+            usersInput = float(input(text))
+        except (ValueError, NameError):
+            print("Input must be of type float or integer!")
+            continue
+        else:
+            return usersInput
+            break
 
-else:
-    print("input needs to be type float or integer")
+totalSeconds = getInput("Enter total seconds: ")
+timeTuple = secondsToDHMS(totalSeconds)
+
+returnString = \
+    str(timeTuple[-1]) + " seconds works out to " + \
+    timeTuple[0] + ", " + \
+    timeTuple[1] + ", " + \
+    timeTuple[2] + ", " + \
+    timeTuple[3]
+
+print(returnString)
