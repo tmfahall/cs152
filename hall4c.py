@@ -4,7 +4,9 @@
 # Instructor: Dr. Brekke
 # Assignment: Program 4c
 
-# inputs an integer N then calculates and outputs the sum of the first N integers. For example 1+2+3+...+N
+# inputs an integer N
+# calculates the sum of the first N integers. For example 1+2+3+...+N
+# outputs sum of the first N integers
 
 
 def get_input(input_text, input_type):
@@ -42,3 +44,9 @@ integer_n = get_input(input_message, input_type)
 total_to_return = sum_of_first_n_integers(integer_n)
 
 print(total_to_return)
+
+# only for testing
+
+# from functools import reduce
+
+# test = reduce((lambda a, b: a + b), list(range(integer_n + 1)))

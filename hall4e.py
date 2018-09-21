@@ -4,8 +4,8 @@
 # Instructor: Dr. Brekke
 # Assignment: Program 4e
 
-# inputs an integer N then outputs the odd integers from 1 to N
-# inclusive then outputs the even integers from 1 to N inclusive.
+# inputs an integer N then outputs the odd integers from 1 to N inclusive 
+# then outputs the even integers from 1 to N inclusive.
 
 
 def get_input(input_text, input_type):
@@ -34,9 +34,9 @@ def get_odds_and_evens(integer_n):
 
     while counter > 0:
         if counter % 2 == 0:
-            even_list.append(counter)
+            even_list.insert(0, counter)
         else:
-            odd_list.append(counter)
+            odd_list.insert(0, counter)
         counter = counter - 1
 
     return (odd_list, even_list)
@@ -49,7 +49,5 @@ integer_n = get_input(input_message, input_type)
 return_tuple = get_odds_and_evens(integer_n)
 
 for int_list in return_tuple:
-    int_list.reverse()
-    str_list = list(map(str, int_list))
-    print(", ".join(str_list))
+    print(", ".join(str(item) for item in int_list))
 

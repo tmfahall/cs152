@@ -4,9 +4,11 @@
 # Instructor: Dr. Brekke
 # Assignment: Program 4a
 
-# lastname4a.py - outputs the months of the year using a for loop
+# outputs the months of the year using a for loop
 
-tuple_months_of_year = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+tuple_months_of_year = ("January", "February", "March", "April", "May",/
+                        "June", "July", "August", "September", "October",/
+                        "November", /"December")
 
 for month in tuple_months_of_year:
     print(month)

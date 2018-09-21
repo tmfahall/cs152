@@ -4,7 +4,8 @@
 # Instructor: Dr. Brekke
 # Assignment: Program 4d
 
-# inputs an integer N then calculates and outputs N! (factorial). N! is 1*2*3*...*N
+# inputs an integer N then calculates and outputs N! (factorial). 
+# N! is 1*2*3*...*N
 
 
 def get_input(input_text, input_type):
@@ -39,6 +40,7 @@ input_message = "Enter an integer: "
 input_type = int
 
 integer_n = get_input(input_message, input_type)
+
 total_to_return = product_of_first_n_integers(integer_n)
 
 print(total_to_return)

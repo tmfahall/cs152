@@ -4,7 +4,8 @@
 # Instructor: Dr. Brekke
 # Assignment: Program 4f
 
-# inputs integers M and N then outputs the product (M * N) without using the multiplication operator.
+# inputs integers M and N then outputs the product (M * N)
+# without using the multiplication operator.
 
 
 def get_input(input_text, input_type):

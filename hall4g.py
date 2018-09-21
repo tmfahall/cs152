@@ -4,7 +4,8 @@
 # Instructor: Dr. Brekke
 # Assignment: Program 4g
 
-# inputs an integer N, then inputs N additional integers and finds and outputs the average of the N integers.
+# inputs an integer N, then inputs N additional integers
+# finds and outputs the average of the N integers.
 
 finished = False
 int_list = list()
@@ -77,7 +78,8 @@ int_list_average = get_average(int_list_sum, int_list_count)
 # debugging
 print(int_list)
 print("total / count = average")
-print(str(int_list_sum) + " / " + str(int_list_count) + " = " + str(int_list_average))
+print(str(int_list_sum) + " / " + str(int_list_count) +/
+      " = " + str(int_list_average))
 
 
 # using import functools just to try some stuff
@@ -85,7 +87,8 @@ print(str(int_list_sum) + " / " + str(int_list_count) + " = " + str(int_list_ave
 from functools import reduce
 
 int_list_sum_reduce_lambda = reduce((lambda a, b: a + b), int_list)
-int_list_average_reduce_lambda = reduce(lambda a, b: a + b, int_list) / float(len(int_list))
+int_list_average_reduce_lambda = /
+    reduce(lambda a, b: a + b, int_list) / float(len(int_list))
 
 print(int_list_sum_reduce_lambda)
 print(int_list_average_reduce_lambda)
