@@ -1,5 +1,10 @@
-import datetime
+# Author: Andrew Hall
+# Date: 10/29/18
+# Class: CSIS 152
+# Instructor: Dr. Brekke
+# Assignment: Program 7
 
+import datetime
 
 def main():
     date_to_use = birthday_getter()
