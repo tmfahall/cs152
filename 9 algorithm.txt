@@ -1,0 +1,89 @@
+Problem: Given two ints output the least common multiple
+
+Inputs: two positive integers
+
+Outputs: "The least common multiple is x" - where x is the LCM
+
+Algorithm:
+    get inputs A, B
+    make sure A and B are > 0
+    create a list and fill with multiples of A
+# WRITE MORE TEST CASES ON THIS TO FIGURE IT OUT UNTIL THEN JUST START LIST AT A AND GO TO A * B
+#       if B > A
+#           start list at B - (B % A)
+#           end list at A * B
+#       if A > B
+#           start list at A - (A % B)
+#           end list at A * B
+    loop through multiples of B and compare with list-A
+    the first match is the LCM
+
+Test:
+    -CASE A < B max LCM
+    inputs 3, 19
+    [18,21,24,27,30,33,36,39,42,45,48,51,54,57]
+    19 no
+    38 no
+    57 yes - LCM
+
+    The least common multiple of 3 and 19 is 57
+
+
+    -CASE A < B min LCM
+    inputs 7, 8
+    [7,14,21,28,35,42,49,56]
+    8 no
+    16 no
+    24 no
+    32 no
+    40 no
+    48 no
+    56 yes - LCM
+
+    The least common multiple of 7 and 8 is 56
+
+
+    -CASE A < B random LCM
+    inputs 4, 6
+    [4,8,12,16,20,24]
+    6 no
+    12 yes - LCM
+
+    The least common multiple of 4 and 6 is 12
+
+
+    -CASE A > B max LCM
+    inputs 9, 5
+    [9,18,27,36,45]
+    5 no
+    10 no
+    15 no
+    20 no
+    25 no
+    30 no
+    35 no
+    40 no
+    45 yes - LCM
+
+    The least common multiple of 9 and 5 is 45
+
+
+    -CASE A > B min LCM
+    inputs 6, 2
+    [6,12,18]
+    2 no
+    4 no
+    6 yes - LCM
+
+    The least common multiple of 2 and 6 is 6
+
+
+    -CASE A > B random LCM
+    inputs 8, 6
+    [8,16,24,32,40,48]
+    6 no
+    12 no
+    18 no
+    24 yes - LCM
+
+    The least common multiple of 8 and 6 is 48
